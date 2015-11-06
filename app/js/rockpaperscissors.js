@@ -34,7 +34,7 @@ function getComputerMove(move) {
     // Write an expression that operates on a variable called `move`
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
-    return return var move || randomPlay; 
+    return var move || randomPlay; 
     move = move || randomPlay();
 }
 
@@ -43,7 +43,42 @@ function getWinner(playerMove,computerMove) {
     // Write code that will set winner to either 'player', 'computer', or 'tie' based on the values of playerMove and computerMove.
     // Assume that the only values playerMove and computerMove can have are 'rock', 'paper', and 'scissors'.
     // The rules of the game are that 'rock' beats 'scissors', 'scissors' beats 'paper', and 'paper' beats 'rock'.
-    /* YOUR CODE HERE */
+    var playerMove = 'scissors';
+var computerMove = 'scissors';
+var rock;
+var scissors;
+var paper;
+var winner;
+var result;
+
+if ((playerMove === 'rock') && (computerMove === 'scissors')) {
+    result = 'Player Wins!';
+    console.log(result);
+} else if ((playerMove === 'scissors') && (computerMove === 'rock')) {
+    result = 'Computer Wins!';
+    console.log(result);
+} else if ((playerMove === 'paper') && (computerMove === 'rock')) {
+    result = 'Player Wins!';
+    console.log(result);
+} else if ((playerMove === 'rock') && (computerMove === 'paper')) {
+    result = 'Computer Wins!'; 
+    console.log(result);
+} else if ((playerMove === 'rock') && (computerMove === 'rock')) {
+    result = 'Tie game, play again!'; 
+    console.log(result);
+} else if ((playerMove === 'scissors') && (computerMove === 'paper')) {
+    result = 'Player Wins!';
+    console.log(result); 
+} else if ((playerMove === 'paper') && (computerMove === 'scissors')) {
+    result = 'Computer Wins!';
+    console.log(result); 
+} else if ((playerMove === 'scissors') && (computerMove === 'scissors')) {
+    result = 'Tie game, play again!'; 
+    console.log(result);
+} else if ((playerMove === 'paper') && (computerMove === 'paper')) {
+    result = 'Tie game, play again!'; 
+    console.log(result);
+}
     return winner;
 }
 
